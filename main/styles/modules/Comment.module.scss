@@ -1,0 +1,115 @@
+@import '../settings/color.scss';
+@import '../settings/layout.scss';
+@import '../settings/typography.scss';
+
+.comment{
+  border-radius: 10px;
+  background-color: $White;
+  max-width: $Desktop;
+  width: 100%;
+  padding: 20px;
+
+  display: flex;
+
+  @media screen and (max-width:$Desktop) {
+    max-width: $Mobile;
+  }
+
+
+  .likes{
+    background-color: $Very_light_gray;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-height: 105px;
+
+    .btn_rate{
+      background: none;
+      border: none;
+      color: $Light_grayish_blue;
+      cursor: pointer;
+      padding: 12px;
+      font-size: $Paragraph_Font_size;
+      font-weight: $Weight_Bold;
+      border-radius: inherit;
+    }
+
+    .btn_rate:hover{
+      background-color: darkgray;
+      
+    }
+
+    .rating{
+      color: $Moderate_blue;
+      font-weight: $Weight_Bold;
+    }
+  }
+
+  .comment_content{
+
+    width: 100%;
+    
+      .user_data{
+        width: 100%;
+        display: flex;
+
+        .user_img{
+          width: 40px;
+        }
+
+        .user_img_flex_item{
+          margin-left: 20px;
+        }
+
+        .username_flex_item{
+          margin-left: 20px;
+          font-weight: $Weight_Bold;
+        }
+
+        .created_at_flex_item{
+          margin-left: 20px;
+          color: $Grey;
+        }
+
+        .reply_btn_flex_item{
+          margin-left: auto;
+          .reply_btn{
+            background: url('/icon-reply.svg');
+            background-repeat: no-repeat;
+            border: none;
+            cursor: pointer;
+            padding-left: 20px;
+            color: $Dark_blue;
+            font-weight: $Weight_Bold;
+            background-position-y: 2px;
+            border-radius: 10px;
+          }
+
+          .reply_btn:hover{
+            background-color: $Light_grayish_blue;
+          }
+  
+        }
+
+        
+      }
+
+      .comment_text{
+        background: none;
+        border: none;
+        width: 100%;
+        padding: 20px;
+        font-family: $Rubik;
+        font-size: $Paragraph_Font_size;
+        resize: none;
+      }
+
+    
+  }
+
+  
+
+  
+
+}
